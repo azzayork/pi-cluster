@@ -2,6 +2,8 @@
 kubectl = '1.36.2'
 flux2 = '2.8.8'
 k9s = '0.51.0'
+sops = 'latest'
+age = 'latest'
 
 [env]
 KUBECONFIG = '/workspaces/pi-cluster/kubeconfig'

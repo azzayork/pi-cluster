@@ -28,7 +28,7 @@ spec:
               name: linkding-data
           envFrom:
             - secretRef:
-                name: creds
+                name: creds-secret
       volumes:
         - name: linkding-data
           persistentVolumeClaim:

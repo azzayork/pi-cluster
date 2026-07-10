@@ -32,7 +32,7 @@ spec:
     grafana:
       adminPassword: mischa
       ingress:
-        enable: true
+        enabled: true
         ingressClassName: traefik
         hosts:
           - monitoring.azzayork.com

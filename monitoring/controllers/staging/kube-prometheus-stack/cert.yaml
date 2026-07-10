@@ -1,0 +1,30 @@
+# a self-signed issuer, used only to bootstrap the CA
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: selfsigned
+spec:
+  selfSigned: {}
+---
+# a CA cert, signed by the above
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: homelab-ca
+  namespace: cert-manager
+spec:
+  isCA: true
+  commonName: homelab-ca
+  secretName: homelab-ca-key-pair
+  issuerRef:
+    name: selfsigned
+    kind: ClusterIssuer
+---
+# an issuer that signs real certs using that CA
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: homelab-ca-issuer
+spec:
+  ca:
+    secretName: homelab-ca-key-pair

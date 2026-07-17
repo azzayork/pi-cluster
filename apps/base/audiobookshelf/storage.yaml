@@ -34,7 +34,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: audiobookshelf-pocasts-pvc
+  name: audiobookshelf-podcasts-pvc
 spec:
   accessModes:
     - ReadWriteOnce

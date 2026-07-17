@@ -39,7 +39,7 @@ spec:
           # - secretRef:
           # name: creds-secret
       volumes:
-        - name: audiobookshelf-cofig
+        - name: audiobookshelf-config
           persistentVolumeClaim:
             claimName: audiobookshelf-config-pvc
         - name: audiobookshelf-metadata

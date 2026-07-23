@@ -1,5 +1,5 @@
 [tools]
-kubectl = '1.36.2'
+kubectl = '1.36.3'
 flux2 = '2.9.2'
 k9s = '0.51.0'
 sops = 'latest'

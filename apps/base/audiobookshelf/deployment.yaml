@@ -35,9 +35,6 @@ spec:
               name: audiobookshelf-audiobooks
             - mountPath: /podcasts
               name: audiobookshelf-podcasts
-          # envFrom:
-          # - secretRef:
-          # name: creds-secret
       volumes:
         - name: audiobookshelf-config
           persistentVolumeClaim:
